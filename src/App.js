@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useContext } from "react";
+import { ScreenFixed } from "./components/ContextObj";
+import Email from "./components/Email";
 
-function App() {
+const App = () => {
+  const { arr, newObj, show, setShow } = useContext(ScreenFixed);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ display: "flex", gap: "20px" }}>
+        {`${show ? "Name" : "Deepak"}`}
+        <button onClick={() => setShow(false)}>Deepak</button>
+        <button onClick={() => setShow(true)}>Name</button>
+      </div>
+      <Email/>
     </div>
   );
-}
+};
 
 export default App;
