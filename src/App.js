@@ -2,6 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { ScreenFixed } from "./components/ContextObj";
 import Email from "./components/Email";
+import Email2 from "./components/Email2";
+import Email3 from "./components/Email3";
 
 const App = () => {
   const { arr, newObj, show, setShow } = useContext(ScreenFixed);
@@ -12,7 +14,8 @@ const App = () => {
         <button onClick={() => setShow(false)}>Deepak</button>
         <button onClick={() => setShow(true)}>Name</button>
       </div>
-      <Email/>
+      {/* <Email/> */}
+      <Email3/>
     </div>
   );
 };
